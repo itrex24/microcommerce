@@ -65,4 +65,29 @@ def purchase_product():
     print(f"Purchase successful! You bought {stock_wanted} {product_found['name']}(s). Total is {total_price}")
     print(product_found)
 
-purchase_product()
+
+while True:
+    menu = """
+    =========================
+          MICROCOMMERCE      
+    =========================
+    1. View all products
+    2. Search for a product
+    3. Purchase a product
+    4. Exit
+    =========================
+    """
+    print(menu)
+    menu_input = input("Enter your choice: ")
+    if menu_input   == "1":
+        all_products()
+    elif menu_input == "2":
+        product_search()
+    elif menu_input == "3":
+        purchase_product()
+    elif menu_input == "4":
+        print("Thank you")
+        break
+    else:
+        print("Invalid option")
+    
